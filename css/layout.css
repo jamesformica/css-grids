@@ -80,7 +80,7 @@
     border-radius: 10px;
 }
 
-.info a {
+.info > a {
     color: steelblue;
     display: block;
     margin: 10px 0;

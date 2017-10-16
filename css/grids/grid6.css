@@ -1,0 +1,37 @@
+.grid1 {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header"
+                         "side content content content"
+                         "footer footer footer footer";
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+}
+
+.item {
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__header {
+    grid-area: header;
+}
+
+.item__side {
+    grid-area: side;
+}
+
+.item__content {
+    grid-area: content;
+}
+
+.item__footer {
+    grid-area: footer;
+}

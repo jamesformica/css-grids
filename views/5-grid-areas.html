@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid5.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">The Power of Areas</h2>
+
+        <pre>
+.item__header {
+    grid-area: header;
+}
+
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: auto;
+grid-template-areas: "header header header header"
+                     "side content content content"
+                     "footer footer footer footer";
+        </pre>
+
+        <button onclick="switchGrid()">Change Layout</button>
+
+        <div class="grid1 grid1-normal" id="grid">
+            <div class="item item__header" style="background-color: #e74c3c">header</div>
+            <div class="item item__side" style="background-color: #e67e22">side</div>
+            <div class="item item__content" style="background-color: #34495e">content</div>
+            <div class="item item__footer" style="background-color: #2980b9">footer</div>
+        </div>
+
+        <pre>
+grid-template-areas: "footer . . side"
+                     "footer content content side"
+                     "header content content side";</pre>
+
+        <div class="actions">
+            <a href="4-grid-fr.html" class="actions__previous">&lt;&lt; Previous</a>
+            <a href="6-grid-gap.html" class="actions__next">Next &gt;&gt;</a>
+        </div>
+
+    </section>
+
+    <script>
+        var counter = 0;
+        var classes = ["grid1-normal", "grid1-switch", "grid1-layout1", "grid1-layout2", "grid1-layout3", "grid1-layout4"];
+        
+        function switchGrid() {
+            var _grid = document.getElementById("grid");
+
+            _grid.classList.remove(classes[counter % classes.length]);
+            counter++;
+            _grid.classList.add(classes[counter % classes.length]);
+        }
+    </script>
+
+</body>
+
+</html>

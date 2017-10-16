@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid1.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">Fixed Grid Sizing</h2>
+
+        <p>So how do we actually define a grid? It is pretty easy.</p>
+
+        <pre>
+display: grid;
+width: 500px;
+height: 500px;
+border: 1px solid black;
+grid-template-columns: 50px 120px 110px 120px 100px;
+grid-template-rows: 220px 150px 130px;</pre>
+
+        <div class="grid1">
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa">120px / 220px</div>
+            <div class="item" style="background-color: #aaa">110px / 220px</div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa"></div>
+            <div class="item" style="background-color: #aaa">120px / 130px</div>
+            <div class="item" style="background-color: #aaa"></div>
+        </div>
+
+        <div class="actions">
+            <a href="../index.html" class="actions__previous">&lt;&lt; Previous</a>
+            <a href="2-grid-auto.html" class="actions__next">Next &gt;&gt;</a>
+        </div>
+
+    </section>
+</body>
+
+</html>

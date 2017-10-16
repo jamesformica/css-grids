@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid3.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">Using Repeats</h2>
+
+        <p>They've even included shortcuts for you lazy people. You're welcome.</p>
+
+        <pre>
+grid-template-columns: repeat(2, 100px) auto;
+grid-template-rows: repeat(4, 80px) auto;</pre>
+
+        <div class="grid1">
+            <div class="item" style="background-color: #16a085">100px ↔</div>
+            <div class="item" style="background-color: #f1c40f">100px ↔</div>
+            <div class="item" style="background-color: #e74c3c">auto ↔</div>
+            <div class="item" style="background-color: #2ecc71"></div>
+            <div class="item" style="background-color: #d35400"></div>
+            <div class="item" style="background-color: #8e44ad"></div>
+            <div class="item" style="background-color: #9b59b6">80px ↕</div>
+            <div class="item" style="background-color: #f39c12"></div>
+            <div class="item" style="background-color: #1abc9c"></div>
+            <div class="item" style="background-color: #e67e22">80px ↕</div>
+            <div class="item" style="background-color: #34495e"></div>
+            <div class="item" style="background-color: #2980b9"></div>
+            <div class="item" style="background-color: #27ae60">auto ↕</div>
+            <div class="item" style="background-color: #c0392b"></div>
+            <div class="item" style="background-color: #3498db"></div>
+        </div>
+
+        <div class="actions">
+            <a href="2-grid-auto.html" class="actions__previous">&lt;&lt; Previous</a>
+            <a href="4-grid-fr.html" class="actions__next">Next &gt;&gt;</a>
+        </div>
+
+    </section>
+</body>
+
+</html>

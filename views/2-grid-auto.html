@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid2.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">Auto Grid Sizing</h2>
+
+        <p>What if we don't want to use fixed sizes, can that be done? Duh.</p>
+
+        <pre>
+grid-template-columns: [first] 40px 50px auto 50px 40px [last];
+grid-template-rows: 45% 100px auto;</pre>
+
+        <div class="grid1">
+            <div class="item" style="background-color: #16a085"></div>
+            <div class="item" style="background-color: #3498db"></div>
+            <div class="item" style="background-color: #9b59b6">auto ↔</div>
+            <div class="item" style="background-color: #f39c12"></div>
+            <div class="item" style="background-color: #1abc9c"></div>
+            <div class="item" style="background-color: #f1c40f"></div>
+            <div class="item" style="background-color: #e74c3c"></div>
+            <div class="item" style="background-color: #2ecc71"></div>
+            <div class="item" style="background-color: #d35400"></div>
+            <div class="item" style="background-color: #8e44ad"></div>
+            <div class="item" style="background-color: #2980b9"></div>
+            <div class="item" style="background-color: #27ae60"></div>
+            <div class="item" style="background-color: #c0392b">auto ↔ ↕</div>
+            <div class="item" style="background-color: #e67e22"></div>
+            <div class="item" style="background-color: #34495e"></div>
+        </div>
+
+        <div class="actions">
+            <a href="1-grid-fixed.html" class="actions__previous">&lt;&lt; Previous</a>
+            <a href="3-grid-repeat.html" class="actions__next">Next &gt;&gt;</a>
+        </div>
+
+    </section>
+</body>
+
+</html>

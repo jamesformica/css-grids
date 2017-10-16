@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid8.css">
+</head>
+
+<body class="body" onload="initGame()">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">Game Demo</h2>
+
+        <p>Let's put our knowledge together and create a terrible game!</p>
+
+        <div class="grid1" id="grid">
+            <div class="item" style="background-image: url('../images/1.jpg')"></div>
+            <div class="item" style="background-image: url('../images/2.jpg')"></div>
+            <div class="item" style="background-image: url('../images/3.jpg')"></div>
+            <div class="item" style="background-image: url('../images/4.jpg')"></div>
+            <div class="item" style="background-image: url('../images/5.jpg')"></div>
+            <div class="item" style="background-image: url('../images/6.jpg')"></div>
+            <div class="item" style="background-image: url('../images/7.jpg')"></div>
+            <div class="item" style="background-image: url('../images/8.jpg')"></div>
+            <div class="item" style="background-image: url('../images/9.jpg')"></div>
+        </div>
+
+        <pre>
+.item-demo {
+    grid-column-start: 1;
+    grid-column-end: span col4-start;
+    grid-row-start: 2
+    grid-row-end: span 2
+}
+        </pre>
+
+        <div class="actions">
+            <a href="7-grid-ception.html" class="actions__previous">&lt;&lt; Previous</a>
+        </div>
+
+    </section>
+
+    <script>
+        var _selectedItem = null;
+
+        function initGame() {
+            var _items = document.getElementsByClassName("item");
+
+            var gridColumns = 3;
+            var gridColumnIndex = 1;
+            var gridRowIndex = 1;
+            var positions = [];
+
+            for (var i = 0; i < _items.length; i++) {
+                positions.push([gridColumnIndex, gridRowIndex]);
+
+                gridColumnIndex++;
+                if (gridColumnIndex > gridColumns) {
+                    gridColumnIndex = 1;
+                    gridRowIndex++;
+                }
+            }
+
+            for (var i = 0; i < _items.length; i++) {
+                var min = 0;
+                var max = positions.length - 1;
+                var num = Math.floor(Math.random() * (max - min)) + min;
+                var pos = positions.splice(num, 1)[0];
+
+                _items[i].style.gridColumnStart = pos[0];
+                _items[i].style.gridRowStart = pos[1];
+                _items[i].addEventListener("click", onItemClick);
+            }
+        }
+
+        function onItemClick(e) {
+            var _item = e.currentTarget;
+
+            if (_selectedItem === null) {
+                _selectedItem = _item;
+                _selectedItem.classList.add("item-selected");
+                return;
+            }
+
+            if (isOneAppart(_item, _selectedItem)) {
+                var tempItemColStart = _item.style.gridColumnStart;
+                var tempItemRowStart = _item.style.gridRowStart;
+
+                _item.style.gridColumnStart = _selectedItem.style.gridColumnStart;
+                _item.style.gridRowStart = _selectedItem.style.gridRowStart;
+
+                _selectedItem.style.gridColumnStart = tempItemColStart;
+                _selectedItem.style.gridRowStart = tempItemRowStart;
+            }
+
+            _selectedItem.classList.remove("item-selected");
+            _selectedItem = null;
+        }
+
+        function isOneAppart(_item1, _item2) {
+            if (Math.abs(_item1.style.gridColumnStart - _item2.style.gridColumnStart) === 1) {
+                if (_item1.style.gridRowStart == _item2.style.gridRowStart) {
+                    return true;
+                }
+            }
+
+            if (Math.abs(_item1.style.gridRowStart - _item2.style.gridRowStart) === 1) {
+                if (_item1.style.gridColumnStart == _item2.style.gridColumnStart) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

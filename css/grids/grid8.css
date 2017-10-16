@@ -1,0 +1,28 @@
+.grid1 {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    background-color: black;
+}
+
+.item {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.item:hover {
+    outline: 1px dashed white;
+}
+
+.item-selected, .item-selected:hover {
+    outline: 1px solid white;
+}

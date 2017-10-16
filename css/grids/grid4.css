@@ -1,0 +1,17 @@
+.grid1 {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 200px 1fr 1fr;
+}
+
+.item {
+    border-radius: 4px;
+    margin: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="../css/grids/grid4.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__square"></div>
+        <h1 class="header__title">CSS Grid Demo</h1>
+        <span class="header__subtitle">By James Formica</span>
+    </header>
+    <section class="viewport">
+
+        <h2 class="title">Utilising Free Space</h2>
+
+        <p>Let's just pretend 'fr' stands for Flamingo Rampage.</p>
+
+        <pre>
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 2fr 200px 1fr 1fr;</pre>
+
+        <div class="grid1">
+            <div class="item" style="background-color: #16a085"></div>
+            <div class="item" style="background-color: #f1c40f">2fr ↔</div>
+            <div class="item" style="background-color: #e74c3c">1fr ↔</div>
+            <div class="item" style="background-color: #2ecc71">200px ↕</div>
+            <div class="item" style="background-color: #d35400"></div>
+            <div class="item" style="background-color: #8e44ad"></div>
+            <div class="item" style="background-color: #9b59b6"></div>
+            <div class="item" style="background-color: #f39c12"></div>
+            <div class="item" style="background-color: #1abc9c"></div>
+            <div class="item" style="background-color: #e67e22"></div>
+            <div class="item" style="background-color: #34495e"></div>
+            <div class="item" style="background-color: #2980b9"></div>
+        </div>
+
+        <div class="actions">
+            <a href="3-grid-repeat.html" class="actions__previous">&lt;&lt; Previous</a>
+            <a href="5-grid-areas.html" class="actions__next">Next &gt;&gt;</a>
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -12,6 +12,10 @@
     padding-bottom: 50px;
 }
 
+.viewport > p{
+    text-align: center;
+}
+
 .title {
     font-size: 18px;
     font-weight: normal;

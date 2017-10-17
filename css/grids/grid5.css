@@ -56,6 +56,16 @@
     display: none;
 }
 
+@media (max-width: 600px) {
+    .grid1 {
+        grid-template-areas: "content content content content";
+    }
+
+    .item__header, .item__side, .item__footer {
+        display: none !important;
+    }
+}
+
 .item {
     border-radius: 4px;
     margin: 5px;

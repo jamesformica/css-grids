@@ -10,7 +10,7 @@
 
 <body class="body">
     <header class="header">
-        <div class="header__square"></div>
+        <a href="../index.html"><div class="header__square"></div></a>
         <h1 class="header__title">CSS Grid Demo</h1>
         <span class="header__subtitle">By James Formica</span>
     </header>
@@ -39,10 +39,22 @@ grid-template-areas: "header header header header"
             <div class="item item__footer" style="background-color: #2980b9">footer</div>
         </div>
 
+        <br/>
+        <p>Layout number 2:</p>
+
         <pre>
 grid-template-areas: "footer . . side"
                      "footer content content side"
                      "header content content side";</pre>
+
+        <p>It even works with media queries!</p>
+
+        <pre>
+@media (max-width: 600px) {
+    .grid1 {
+        grid-template-areas: "content content content content";
+    }
+}</pre>
 
         <div class="actions">
             <a href="4-grid-fr.html" class="actions__previous">&lt;&lt; Previous</a>

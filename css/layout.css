@@ -70,20 +70,34 @@
 }
 
 .info {
+    position: relative;
     width: 80%;
     max-width: 600px;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
     padding: 20px;
     margin: 20px 0;
     box-sizing: border-box;
-    background: #f1f1f1;
-    border-radius: 10px;
+}
+
+.info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 250px solid transparent;
+    border-right-color: #f1f1f1;
+    border-top-color: #f1f1f1;
+    z-index: -1;
 }
 
 .info > a {
     color: steelblue;
     display: block;
     margin: 10px 0;
+    transition: 0.2s;
+}
+
+.info > a:hover {
+    transform: translateX(10px);
 }
 
 pre {
